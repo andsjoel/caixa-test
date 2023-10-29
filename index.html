@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="src/style/home.css">
+  <title>Caixa</title>
+</head>
+<body>
+  <header>
+    <img src="src/images/home/icon-caixa.png" alt="Caixa Icon">
+  </header>
+  <main>
+      <div class="about-account">
+          <div class="profile">
+              <div class="control2">
+                <img src="src/images/icons/profile-icon.png" alt="Perfil">
+                <span class="username">Anderson Domênico</span>
+              </div>
+              <div class="control1">
+                <img src="src/images/icons/notification-icon.png" alt="Notificações">
+                <span class="badge">3</span>
+              </div>
+          </div>
+          <div class="balance">
+            <div class="value">
+              <span id="balance-amount">R$ 874,22</span>
+              <img id="visibility-icon" src="src/images/icons/eye-icon.png" alt="Eye Icon">
+            </div>
+            <p class="saldo">Saldo em conta</p>
+          </div>
+      </div>
+  </main>
+  <section class="pix-section">
+    <div class="pix-input">
+        <input type="text" id="pix-key" placeholder="Insira a chave PIX" inputmode="numeric">
+        <button id="continue-button">Continuar</button>
+    </div>
+    <div class="pix-options" id="pix-options">
+        <button id="scan-qr-button">
+            QR Code
+            <img src="src/images/icons/qr-icon.png" alt="Qr Image">
+        </button>
+        <button id="favorites-button">
+            Favoritos
+            <img src="src/images/icons/star-icon.png" alt="Fav Icon">
+        </button>
+        <button id="receive-pix-button">
+            Cobrar
+            <img src="src/images/icons/money-icon.png" alt="Cobrar Icon">
+        </button>
+      </div>
+    </div>
+  </section>
+  <div id="form-container" style="display: none;">
+    <form id="pix-form">
+        <div>
+          <label for="pix-key-form">Chave</label>
+          <input type="text" id="pix-key-form" name="pix-key-form" disabled>
+        </div>
+        <div>
+          <label for="nome-form">Nome</label>
+          <input type="text" id="nome-form" name="nome-form">
+        </div>
+        <div>
+          <label for="instituicao-form">Instituição</label>
+          <input type="text" id="instituicao-form" name="instituicao-form">
+        </div>
+        <div>
+          <label for="valor-form">Valor:</label>
+          <input type="text" id="valor-form" placeholder="R$ 0,00" name="valor-form">
+        </div>
+    </form>
+    <button id="confirm-info">Confirmar</button>
+  </div>
+  <script src="src/script/home.js"></script>
+  <footer class="footer">
+    <nav>
+        <ul>
+            <li><a href="#inicio">
+              Início
+              <img src="src/images/icons/home-icon.png" alt="home">
+            </a></li>
+            <li><a href="#conta">
+              Conta
+              <img src="src/images/icons/profile-icon.png" alt="profile">
+            </a></li>
+            <li class="selected"><a href="#area-pix">
+              PIX
+              <img src="src/images/icons/pix-icon.png" alt="pix">
+            </a></li>
+            <li><a href="#menu">
+              Menu
+              <img src="src/images/icons/menu-icon.png" alt="menu">
+            </a></li>
+        </ul>
+    </nav>
+</footer>
+</body>
+</html>

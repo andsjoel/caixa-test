@@ -1,0 +1,426 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #0066b9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #87cefa;
+  padding: 10px 20px;
+  color: #f2f2f2;
+}
+
+header img {
+  width: 85px;
+  background-color: #f2f2f2;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+main {
+  position: relative;
+  background-color: #0066b9;
+  width: 100%;
+  height: 300px;
+}
+
+main::before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  background-image: url("../images/home/caixa_balance.jpg");
+  text-align: center;
+  padding-top: 25px;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+}
+
+.about-account {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.control2 {
+  display: flex;
+  align-items: center;
+}
+
+.profile img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  color: #f2f2f2;
+}
+
+.username {
+  font-size: 15px;
+  color: #f2f2f2;
+  font-weight: 500;
+}
+
+.control1 {
+  display: flex;
+  align-items: center;
+}
+
+.badge {
+  background-color: orange;
+  color: white;
+  border-radius: 50%;
+  padding: 3px 8px;
+  margin-left: -25px;
+  margin-top: -25px;
+}
+
+.balance {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.value {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+}
+
+#balance-amount {
+  color: #f2f2f2;
+}
+
+#visibility-icon {
+  cursor: pointer;
+  margin-left: 10px;
+  color: #f2f2f2;
+  margin-top: -5px;
+  width: 30px;
+}
+
+.saldo {
+  font-size: 14px;
+  color: #87cefa;
+}
+
+
+/* ######################### PIX SECTION ############################# */
+
+/* <section class="pix-section">
+<div class="pix-input">
+    <input type="text" id="pix-key" placeholder="Insira a chave PIX">
+    <button id="continue-button">Continuar</button>
+</div>
+<div class="pix-options">
+    <button id="scan-qr-button">Escanear QR Code</button>
+    <button id="favorites-button">Favoritos</button>
+    <button id="receive-pix-button">Receber PIX</button>
+</div>
+<select id="payment-options">
+    <option value="estabelecimento" selected>Estabelecimento</option>
+    <option value="bomba-di">Bomba DI</option>
+    <option value="shawarma">Shawarma</option>
+    <option value="distribuidora">Distribuidora</option>
+</select>
+</div>
+</section> */
+
+.pix-section {
+  position: relative;
+  background-color: #f2f2f2;
+  height: 600px;
+  margin-top: -150px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pix-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pix-input input {
+  border: 1px solid #0066b9;
+  border-radius: 8px;
+  width: 80%;
+  height: 35px;
+  padding-left: 8px;
+}
+
+#pix-key {
+  font-size: 18px;
+  color: #0066b9;
+}
+
+.pix-input button {
+  margin: 15px;
+  width: 80%;
+  height: 35px;
+  border-radius: 8px;
+  border: none;
+  background-color: rgb(211, 140, 8);
+  color: #f2f2f2;
+  text-transform: uppercase;
+}
+
+.pix-options {
+  display: flex;
+  justify-content: space-around;
+}
+
+.pix-options button {
+  width: 80px;
+  height: 80px;
+  border: 1px solid #0066b9;
+  border-radius: 8px;
+  color: #0066b9;
+  font-size: 12px;
+}
+
+.pix-options button img {
+  width: 60%;
+  margin-top: 5px;
+}
+
+.pix-options button:hover {
+  background-color: #87cefa;
+  scale: 1.1;
+}
+
+/* Estilo para o footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+}
+
+/* ###################### FOOTER ############################ */
+.footer nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  background-color: #0066b9;
+}
+
+.footer nav li {
+  text-transform: uppercase;
+  flex: 1;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.footer nav li a {
+  text-decoration: none;
+  color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 11px;
+}
+
+.footer nav li a img {
+  width: 30%;
+}
+
+/* Estilo para a opção "Área PIX" selecionada */
+.footer nav li.selected {
+  background-color: rgb(211, 140, 8); /* Cor de destaque */
+}
+
+.footer nav li.selected a {
+  color: #fff; /* Cor do texto quando selecionado */
+}
+
+/* ################ */
+
+/* <div id="form-container" style="display: none;">
+<form id="pix-form">
+    <label for="pix-key-form">Chave:</label>
+    <input type="text" id="pix-key-form" name="pix-key-form" disabled>
+    <label for="nome-form">Nome:</label>
+    <input type="text" id="nome-form" name="nome-form">
+    <label for="instituicao-form">Instituição:</label>
+    <input type="text" id="instituicao-form" name="instituicao-form">
+</form>
+<button>Confirmar</button>
+</div> */
+
+#form-container {
+  position: relative;
+  margin-top: -400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+}
+
+#pix-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+}
+
+#pix-form div {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  margin: 8px;
+  color: #0066b9;
+}
+
+#form-container input {
+
+  height: 35px;
+  border: none;
+  background-color: #fff;
+  color: #0066b9;
+  font-size: 15px;
+  border-bottom: 1px solid #0066b9;
+  font-weight: bold;
+}
+
+#confirm-info {
+  margin: 15px;
+  width: 80%;
+  height: 35px;
+  border-radius: 8px;
+  border: none;
+  background-color: rgb(211, 140, 8);
+  color: #f2f2f2;
+  text-transform: uppercase;
+  margin-bottom: 90px;
+}
+
+
+/* ######################### */
+
+
+#section-pass {
+  background-color: #0066b9;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.pass-input {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 18px;
+  color: #0066b9;
+  font-weight: bolder;
+}
+
+#check-button {
+  margin: 50px;
+  width: 80%;
+  height: 35px;
+  border-radius: 8px;
+  border: none;
+  background-color: rgb(211, 140, 8);
+  color: #f2f2f2;
+  text-transform: uppercase;
+}
+
+
+
+/* ################### ABOUT ###################### */
+
+.info-payment {
+  background-color: #f2f2f2;
+  position: relative;
+  margin-top: -150px;
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-payment p {
+  font-size: 12px;
+}
+
+.info-payment span {
+  font-weight: bolder;
+}
+
+.info-payment h3 {
+  color: #0066b9;
+  font-weight: bolder;
+}
+
+.date-value {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  margin-top: -80px;
+  color: #0066b9;
+}
+
+.value-pay, .date {
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #0066b9;
+  border-radius: 15px;
+}
+
+.recebedor {
+  background-color: #dfdfdf;
+  border-bottom: 1px solid black;
+  padding: 12px;
+}
+
+.pagador {
+  padding: 12px;
+  border-bottom: 1px solid black;
+}
+
+.info-payment button {
+  margin: 15px;
+  width: 200px;
+  height: 35px;
+  border-radius: 8px;
+  border: none;
+  background-color: rgb(211, 140, 8);
+  color: #f2f2f2;
+  text-transform: uppercase;
+}
+
+.wait {
+  width: 100vw;
+  color: #f2f2f2;
+  font-size: 25px;
+  text-align: center;
+}
